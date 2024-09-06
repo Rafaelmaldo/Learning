@@ -1,1 +1,41 @@
+# Ignore node_modules directory
 node_modules/
+
+# Ignore log files
+*.log
+npm-debug.log*
+
+# Ignore environment variable files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Ignore build directories
+dist/
+build/
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore package-lock files if you're not using npm
+package-lock.json
+
+# Ignore pnpm lock file if you're not using pnpm
+pnpm-lock.yaml
+
+# Ignore yarn lock file if you're not using Yarn
+yarn.lock
+
+# Ignore IDE and editor config files
+.idea/
+.vscode/
+
+# Ignore coverage reports
+coverage/
+
+# Ignore temporary files
+*.tmp
+*.swp
