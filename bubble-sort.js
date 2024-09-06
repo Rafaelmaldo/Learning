@@ -1,8 +1,6 @@
 console.log('running code');
 
-function bubbleSort(nums) {
-  console.log(nums)
-  // code goes here
+function myBubbleSort(nums) {
   let finishedSort = false;
   while (!finishedSort) {
     let hasSwapped = false;
@@ -11,7 +9,6 @@ function bubbleSort(nums) {
         hasSwapped = false;
       }
       
-      // ! the issue is here 
       if (i === nums.length - 1 && !hasSwapped) {
         finishedSort = true;
         break;
@@ -27,8 +24,24 @@ function bubbleSort(nums) {
       }
     }
   }
-  console.log('nums :>> ', nums);
   return nums;
+}
+
+function bubbleSort(nums) {
+  let swapped = false;
+  do {
+    swapped = false;
+    for (let i = 0; i < nums.length; i++) {
+      // snapshot(nums);
+      if (nums[i] > nums[i + 1]) {
+        const temp = nums[i];
+        nums[i] = nums[i + 1];
+        nums[i + 1] = temp;
+        swapped = true;
+      }
+    }
+  } while (swapped);
+  // snapshot(nums);
 }
 
 console.log('return value :>> ', bubbleSort([10, 5, 3, 8, 2, 6, 4, 7, 9, 1]));
