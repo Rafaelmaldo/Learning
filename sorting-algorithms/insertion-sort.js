@@ -1,5 +1,4 @@
 function myInsertionSort(nums) {
-  
   nums.forEach((element, index) => {
     let numberToInsert = element;
     let j = index - 1;
