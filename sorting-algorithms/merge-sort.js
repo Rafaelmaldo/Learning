@@ -37,6 +37,7 @@ const mergeSort = (nums) => {
   const left = nums.slice(0, middle);
   const right = nums.slice(middle);
 
+  // * He did this in the tutorial I find this much easier to read as well and easier to debug
   const sortedLeft = mergeSort(left);
   const sortedRight = mergeSort(right);
 
@@ -48,10 +49,12 @@ const merge = (left, right) => {
   const results = [];
 
   // go until one list runs outs
+  // * firstly he used a new array and looped through each element 
   while (left.length && right.length) {
     if (left[0] <= right[0]) {
       // shift removes the first element in an array and returns it
-      // it's like .pop() for the front
+      // * looping through the first elements and check which of the first elements 
+      // * are smaller and adding the smaller element to the beginning of the array
       results.push(left.shift());
     } else {
       results.push(right.shift());
@@ -59,6 +62,8 @@ const merge = (left, right) => {
   }
 
   // either left or right will be empty so you can safely concat both
+  // * because there should only be one element left he concatenates the arrays because the only value should be the largest
+  // * saves a check
   return results.concat(left, right);
 };
 
