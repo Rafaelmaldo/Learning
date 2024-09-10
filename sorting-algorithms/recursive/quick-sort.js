@@ -9,14 +9,14 @@
   // ! Do not add the pivot which is the last element
   // ? handling equal add to less than pile
 
-const myQuickSort = (nums) => {
+const quickSort = (nums) => {
   if (nums.length < 2) {
     return nums;
   }
 
   const pivotValue = [nums.pop()];
-  const largerValues = nums.filter(num => num <= pivotValue);
-  const smallerValues =  nums.filter(num => num > pivotValue);;
+  const largerValues = nums.filter(num => num <= pivotValue[0]);
+  const smallerValues =  nums.filter(num => num > pivotValue[0]);
 
   const smallerValuesSorted = quickSort(smallerValues)
   const largerValuesSorted = quickSort(largerValues)
@@ -25,4 +25,5 @@ const myQuickSort = (nums) => {
   return allValues;
 }
 
-console.log('myQuickSort: ', myQuickSort(nums));
+const nums = [10, 4, 7, 84, 6, 3, 9, 4, 7, 5];
+console.log('myQuickSort: ', quickSort(nums));
