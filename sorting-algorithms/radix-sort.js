@@ -69,5 +69,5 @@ const nums = new Array(fill)
   .map(() => Math.floor(Math.random() * 500000));
 
 const ans = radixSort(nums);
-console.log(ans) // -> [properly sorted array]
-console.log(nums.sort()) // -> []
+console.log('My Radix Sort -> ', ans) // -> [properly sorted array]
+console.log('Built in Sort function -> ', nums.sort()) // -> []
