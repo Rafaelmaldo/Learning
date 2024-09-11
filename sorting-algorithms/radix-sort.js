@@ -54,7 +54,7 @@ const radixSort = (array) => {
 
     // remove the elements from the buckets and add them to the front of the array
     for (let bucket of buckets) {
-      array = [...array, ...bucket]
+      array.push(...bucket)
     }
   }
 
@@ -69,5 +69,7 @@ const nums = new Array(fill)
   .map(() => Math.floor(Math.random() * 500000));
 
 const ans = radixSort(nums);
+console.log(nums)
 console.log('My Radix Sort -> ', ans) // -> [properly sorted array]
-console.log('Built in Sort function -> ', nums.sort()) // -> []
+// console.log('Built in Sort function -> ', nums.sort()) // -> []
+// console.log('nums array after running sort -> ', nums);
