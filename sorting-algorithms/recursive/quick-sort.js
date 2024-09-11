@@ -15,6 +15,8 @@ const quickSort = (nums) => {
   }
 
   const pivotValue = [nums.pop()];
+  // * he didn't use the filter built in function 
+  // * he used a for loop similar to the one in merge sort dividing to the right and left 
   const largerValues = nums.filter(num => num <= pivotValue[0]);
   const smallerValues =  nums.filter(num => num > pivotValue[0]);
 
