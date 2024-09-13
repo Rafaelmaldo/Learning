@@ -4,11 +4,18 @@
 // it's up to you what to return if the object isn't found (we're not testing that)
 
 function linearSearch(id, array) {
-  array.forEach(element => {
+  // * pretty useful lesson here regarding the difference between for and for each 
+  // * (function scoping)
+  // array.forEach(element => {
+  //   if (element.id === id) {
+  //     return element;
+  //   }
+  // });
+  for (element of array) {
     if (element.id === id) {
       return element;
     }
-  });
+  };
   return null;
 }
 
